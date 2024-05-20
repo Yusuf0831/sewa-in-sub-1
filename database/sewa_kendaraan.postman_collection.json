@@ -1,0 +1,1593 @@
+{
+	"info": {
+		"_postman_id": "403eeaf8-1a47-4f2c-a88a-34463b88a54a",
+		"name": "sewa_kendaraan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26409236"
+	},
+	"item": [
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/sgt/api/user/login.php"
+			},
+			"response": []
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "namaLengkap",
+							"value": "sasuke uciha",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl imam bonjol, yogyakarta utara",
+							"type": "text"
+						},
+						{
+							"key": "noTelf",
+							"value": "085631287",
+							"type": "text"
+						},
+						{
+							"key": "kota",
+							"value": "sleman",
+							"type": "text"
+						},
+						{
+							"key": "fotoProfil",
+							"type": "file",
+							"src": "/home/crow/Pictures/sewa_kendaraan/1520442674627.jpeg"
+						}
+					]
+				},
+				"url": "http://localhost/sgt/api/user/register.php"
+			},
+			"response": []
+		},
+		{
+			"name": "guest_KendaraanGetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/guest_kendaraan.php?action=getAll&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18&search=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"guest_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_kendaraanGetDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/guest_kendaraan.php?action=getDetail&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&idKendaraan=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"guest_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_kendaraan_booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idKendaraan",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "tglPinjam",
+							"value": "2024-05-08",
+							"type": "text"
+						},
+						{
+							"key": "tglKembali",
+							"value": "2024-05-11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/guest_kendaraan.php?action=booking&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"guest_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "booking"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_kendaraan_kembalikan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/guest_kendaraan.php?action=kembalikanKendaraan&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"guest_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "kembalikanKendaraan"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_cekTransaksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/guest_kendaraan.php?action=cekTransaksi&sessionID=Z1NpMGMrMXdiN2IxWnRqaUd4c29IQT09&sessionIdUser=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"guest_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "Z1NpMGMrMXdiN2IxWnRqaUd4c29IQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_cekTransaksiDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/guest_kendaraan.php?action=cekTransaksiDetail&sessionID=Z1NpMGMrMXdiN2IxWnRqaUd4c29IQT09&sessionIdUser=8&idTransaksi=25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"guest_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksiDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "Z1NpMGMrMXdiN2IxWnRqaUd4c29IQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "8"
+						},
+						{
+							"key": "idTransaksi",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_kendaraan_getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=getAll&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&search=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_kendaraan_getDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=getDetail&sessionID=dkFGQ0VkSE5oRXZteDJJbHh6d01UUT09&sessionIdUser=9&idKendaraan=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "dkFGQ0VkSE5oRXZteDJJbHh6d01UUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "9"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_cekTransaksi_getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=cekTransaksi&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_cekTransaksi_getDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=cekTransaksiDetail&sessionID=dkFGQ0VkSE5oRXZteDJJbHh6d01UUT09&sessionIdUser=9&idTransaksi=25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksiDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "dkFGQ0VkSE5oRXZteDJJbHh6d01UUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "9"
+						},
+						{
+							"key": "idTransaksi",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_kendaraaan_add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "jenisKendaraan",
+							"value": "mobil",
+							"type": "text"
+						},
+						{
+							"key": "namaKendaraan",
+							"value": "honda avanza merah marun",
+							"type": "text"
+						},
+						{
+							"key": "nopol",
+							"value": "ab 111 cc",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "100000",
+							"type": "text"
+						},
+						{
+							"key": "fotoKendaraan",
+							"type": "file",
+							"src": "/home/crow/Pictures/sewa_kendaraan/1433178Ruslan-Avanzap.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=insert&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "insert"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_kendaraan_edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "jenisKendaraan",
+							"value": "mobil",
+							"type": "text"
+						},
+						{
+							"key": "namaKendaraan",
+							"value": "avanza biru tua",
+							"type": "text"
+						},
+						{
+							"key": "nopol",
+							"value": "ab 222",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "fotoKendaraan",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=edit&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&idKendaraan=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "edit"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_kendaraan_delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idKendaraan",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=delete&sessionID=UDdIeHBTK2tORldLdFFPc3RJSFhmUT09&sessionIdUser=5&idKendaraan=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "delete"
+						},
+						{
+							"key": "sessionID",
+							"value": "UDdIeHBTK2tORldLdFFPc3RJSFhmUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "5"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_bookingReject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "18",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=bookingReject&sessionID=UDdIeHBTK2tORldLdFFPc3RJSFhmUT09&sessionIdUser=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "bookingReject"
+						},
+						{
+							"key": "sessionID",
+							"value": "UDdIeHBTK2tORldLdFFPc3RJSFhmUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_bookingConfirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=bookingConfirm&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "bookingConfirm"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_serahkanKendaraanKeGuest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=serahkanKendaraanKeGuest&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "serahkanKendaraanKeGuest"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_menerimaKendaraanDariGuest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/host_kendaraan.php?action=menerimaKendaraanDariGuest&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"host_kendaraan.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "menerimaKendaraanDariGuest"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/sgt/api/user/loginAdmin.php"
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=getAll&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&search=bantul",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": "bantul"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_getDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=getDetail&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idUser=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idUser",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "fendi",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "namaLengkap",
+							"value": "fendi ahmad",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl kaliurang no 12",
+							"type": "text"
+						},
+						{
+							"key": "kota",
+							"value": "depok",
+							"type": "text"
+						},
+						{
+							"key": "noTelf",
+							"value": "088758",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=add&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "add"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "namaLengkap",
+							"value": "sasuke ujchiha",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl kaliurang no 12",
+							"type": "text"
+						},
+						{
+							"key": "kota",
+							"value": "sleman",
+							"type": "text"
+						},
+						{
+							"key": "noTelf",
+							"value": "088758",
+							"type": "text"
+						},
+						{
+							"key": "idUser",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "verifikasi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=edit&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "edit"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idUser",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=delete&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "delete"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_kendaraan_GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=kendaraanGetAll&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "kendaraanGetAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_kendaraan_GetDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=kendaraanGetDetail&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idKendaraan=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "kendaraanGetDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_kendaraan_edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "jenisKendaraan",
+							"value": "mobil",
+							"type": "text"
+						},
+						{
+							"key": "namaKendaraan",
+							"value": "avanza merah",
+							"type": "text"
+						},
+						{
+							"key": "nopol",
+							"value": "ab 222",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "fotoKendaraan",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "status",
+							"value": "ready",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=kendaraanEdit&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idKendaraan=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "kendaraanEdit"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_kendaraan_delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "jenisKendaraan",
+							"value": "mobil",
+							"type": "text"
+						},
+						{
+							"key": "namaKendaraan",
+							"value": "avanza merah",
+							"type": "text"
+						},
+						{
+							"key": "nopol",
+							"value": "ab 222",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "fotoKendaraan",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "status",
+							"value": "ready",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=kendaraanDelete&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idKendaraan=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "kendaraanDelete"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_cekTransaksi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=cekTransaksi&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_cekTransaksi_detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=cekTransaksi&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idTransaksi=22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idTransaksi",
+							"value": "22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_editTransaksiStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "selesai",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=editTransaksiStatus&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "editTransaksiStatus"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_editKendaraanStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idKendaraan",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "ready",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/adminUser.php?action=editKendaraanStatus&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "editKendaraanStatus"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
